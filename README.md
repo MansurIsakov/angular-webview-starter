@@ -1,6 +1,6 @@
 # Webview Starter
 
-Webview Starter is a project template designed for use across all webview projects. To get started, fork this project and configure your new project according to the provided [documentation](https://spaceneobank.atlassian.net/wiki/spaces/FT/pages/2979070107/Bitbucket+Settings).
+Webview Starter is a project template designed for use across all webview projects.
 
 ## Environments
 
@@ -26,7 +26,7 @@ Transloco is used for translations. For more details, refer to the [Transloco do
 
 ## Icons
 
-All manipulations with icons should be done using Icomoon. The guide on how to add icons to the current pack can be found [here](https://spaceneobank.atlassian.net/wiki/spaces/FT/pages/3085959458/IcoMoon+Guide).
+All manipulations with icons should be done using Icomoon. The guide on how to add icons to the current pack can be found [here](https://icomoon.io/docs).
 
 ## Layouts
 
@@ -56,7 +56,7 @@ Choose the layout that best fits the needs of your project and modify it as nece
 
 ## Commit and Branch Convention
 
-All commits should follow the rules of conventional commits. Branch naming should also adhere to the guidelines in the [documentation](https://spaceneobank.atlassian.net/wiki/spaces/FT/pages/2979070222/Git+Guideline).
+All commits should follow the rules of conventional commits. Branch naming should also adhere to the guidelines in the [documentation](https://ec.europa.eu/component-library/v1.15.0/eu/docs/conventions/git/).
 
 If you encounter a "lint-staged" error, try manually running `npm run lint` to identify and fix the problem.
 
