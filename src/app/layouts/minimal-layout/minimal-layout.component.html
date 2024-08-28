@@ -1,0 +1,10 @@
+@if (platformService.isIOS()) {
+  <app-ios-header class="fixed left-0 right-0 top-0 z-10" />
+} @else {
+  <app-header class="fixed left-0 right-0 top-0 z-10" />
+}
+
+<main
+  class="mx-auto h-full max-w-web-view touch-manipulation px-4 py-content-padding">
+  <router-outlet />
+</main>

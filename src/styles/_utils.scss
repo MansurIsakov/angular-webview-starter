@@ -1,0 +1,134 @@
+@layer utilities {
+  /* Title */
+  .t1-500 {
+    @apply leading-semi-4 text-vs font-medium;
+  }
+
+  .t1-600 {
+    @apply text-semi-lg font-semibold leading-6;
+  }
+  .t2-600 {
+    @apply text-semi-base font-semibold leading-5;
+  }
+
+  .t3-600 {
+    @apply text-base font-semibold leading-5;
+  }
+
+  .t4-600 {
+    @apply text-semi-lg font-medium leading-6;
+  }
+
+  .t5-600 {
+    @apply text-lg font-semibold leading-6;
+  }
+
+  .t6-400 {
+    @apply text-2xl;
+  }
+
+  .t6-500 {
+    @apply text-2xl font-medium;
+  }
+
+  .t7-700 {
+    @apply text-semi-xl font-bold leading-12;
+  }
+
+  /* Subtitle */
+  .s3-400 {
+    @apply text-xl leading-8;
+  }
+
+  .s2-600 {
+    @apply text-base font-semibold leading-5;
+  }
+
+  /* Body */
+  .b1-400 {
+    @apply text-vs leading-4;
+  }
+
+  .b2-400 {
+    @apply text-xs;
+  }
+
+  .b2-500 {
+    @apply text-xs font-medium;
+  }
+
+  .b3-500 {
+    @apply text-semi-sm font-medium leading-5;
+  }
+
+  .b4-400 {
+    @apply text-sm;
+  }
+
+  .b4-500 {
+    @apply text-sm font-medium;
+  }
+
+  .b5-400 {
+    @apply text-semi-base leading-5 tracking-wide;
+  }
+
+  .b6-400 {
+    @apply text-base;
+  }
+
+  /* Label */
+  .l1-500 {
+    @apply text-xs font-medium;
+  }
+
+  .l2-500 {
+    @apply text-sm font-medium;
+  }
+
+  .l3-400 {
+    @apply text-base;
+  }
+
+  .l3-500 {
+    @apply text-base font-medium;
+  }
+
+  /* Action */
+  .a1-400 {
+    @apply leading-semi-4 text-vs;
+  }
+
+  .a2-500 {
+    @apply text-semi-sm font-medium leading-5;
+  }
+
+  .a3-500 {
+    @apply text-sm font-medium;
+  }
+
+  .a3-600 {
+    @apply text-sm font-semibold tracking-wide;
+  }
+
+  .a4-600 {
+    @apply text-base font-semibold;
+  }
+
+  .a5-400 {
+    @apply text-semi-lg leading-6;
+  }
+
+  .a5-600 {
+    @apply text-semi-lg font-semibold;
+  }
+
+  /* Caption */
+  .c1-600 {
+    @apply leading-semi-4 text-vs font-semibold tracking-wide;
+  }
+
+  .c2-500 {
+    @apply text-sm font-medium;
+  }
+}

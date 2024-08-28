@@ -1,0 +1,48 @@
+image: node:XX.XX.XX
+definitions:
+  steps:
+    - step: &build
+        name: Build
+        clone:
+          depth: 5
+        script:
+          - git submodule update --init --remote --merge
+          - bash deploy-project/angular-spa/step-build.sh
+        artifacts:
+          - build.tar.gz
+          - deploy-project/angular-spa/*.sh
+    - step: &deploy
+        name: Deploy
+        trigger: manual
+        script:
+          - bash deploy-project/angular-spa/step-deploy.sh
+pipelines:
+  default:
+    - step:
+        <<: *build
+        deployment: stage-build
+        name: Build for stage
+    - step:
+        <<: *deploy
+        deployment: test-server
+        name: Deploy to stage server
+    - step:
+        <<: *deploy
+        deployment: test-server-2
+        name: Deploy to second stage server
+        trigger: automatic
+  branches:
+    master:
+      - step:
+          <<: *build
+          deployment: production-build
+          name: Build for production
+      - step:
+          <<: *deploy
+          deployment: production-server
+          name: Deploy to production
+      - step:
+          <<: *deploy
+          deployment: production-server-2
+          name: Deploy to second production server
+          trigger: automatic

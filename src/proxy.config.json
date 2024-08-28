@@ -1,0 +1,11 @@
+{
+  "/api/*": {
+    "target": "URL_GOES_HERE", // TODO: Change this to the URL of your API
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "pathRewrite": {
+      "^/api": ""
+    }
+  }
+}

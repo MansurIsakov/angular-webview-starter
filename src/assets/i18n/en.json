@@ -1,0 +1,16 @@
+{
+  "common": {},
+  "screens": {
+    "not-found": {
+      "title": "Something went wrong",
+      "description": "Please, try again. If the error persists, contact our call center at +998 78 150 22 45"
+    }
+  },
+  "errors": {
+    "unknown": "Something went wrong"
+  },
+  "input-errors": {
+    "required": "This field is required",
+    "minLength": "Minimum length is {{requiredLength}}"
+  }
+}

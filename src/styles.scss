@@ -1,0 +1,8 @@
+@use 'node_modules/@ngxpert/hot-toast/src/styles/styles.scss';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './styles/index.scss';
+@import './assets/icomoon/style.scss';

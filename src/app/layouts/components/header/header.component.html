@@ -1,0 +1,29 @@
+<header
+  class="m-auto flex h-header max-w-web-view items-center bg-neutral-150 px-4 text-semi-lg leading-6">
+  <div class="mr-4 leading-none">
+    <a href="#" (click)="onBack($event)">
+      <span
+        aria-label="Back Icon"
+        class="icon-back text-2xl text-neutral-850"></span>
+    </a>
+  </div>
+
+  @if (header(); as header) {
+    <div class="flex w-full items-center justify-between">
+      <h2 class="w-4/6 truncate font-semibold">
+        {{ header.title }}
+      </h2>
+
+      @if (header.link; as link) {
+        <span
+          tabindex="0"
+          class="text-wrap"
+          [ngClass]="{ 'text-primary-500': link.accent }"
+          (keydown.enter)="handleLinkClick(link)"
+          (click)="handleLinkClick(link)">
+          {{ link.title }}
+        </span>
+      }
+    </div>
+  }
+</header>

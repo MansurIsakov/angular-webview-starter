@@ -1,0 +1,79 @@
+{
+  "name": "webview-starter",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build:stage": "ng build --configuration stage",
+    "build:prod": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "lint": "eslint . --ext .ts,.html",
+    "format": "prettier --write \"src/**/*.{ts,html}\"",
+    "check-branch-name": "node scripts/check-branch-name.js"
+  },
+  "private": true,
+  "lint-staged": {
+    "*.ts": [
+      "npm run lint",
+      "prettier --write"
+    ],
+    "*.html": [
+      "prettier --write"
+    ],
+    "*.css": [
+      "prettier --write"
+    ]
+  },
+  "dependencies": {
+    "@angular/animations": "^18.1.0",
+    "@angular/common": "^18.1.0",
+    "@angular/compiler": "^18.1.0",
+    "@angular/core": "^18.1.0",
+    "@angular/forms": "^18.1.0",
+    "@angular/platform-browser": "^18.1.0",
+    "@angular/platform-browser-dynamic": "^18.1.0",
+    "@angular/router": "^18.1.0",
+    "@jsverse/transloco": "^7.4.2",
+    "@ngneat/overview": "^6.0.0",
+    "@ngxpert/hot-toast": "^3.0.0",
+    "ngx-webstorage": "^18.0.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "uuid": "^10.0.0",
+    "zone.js": "~0.14.3"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^18.1.0",
+    "@angular/cli": "^18.1.0",
+    "@angular/compiler-cli": "^18.1.0",
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "@types/jasmine": "~5.1.0",
+    "@types/uuid": "^10.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@typescript-eslint/parser": "^5.62.0",
+    "angular-eslint": "18.1.0",
+    "autoprefixer": "^10.4.19",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-prettier": "^5.1.3",
+    "husky": "^9.0.11",
+    "jasmine-core": "~5.1.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.1.0",
+    "lint-staged": "^15.2.7",
+    "postcss": "^8.4.39",
+    "prettier": "^3.3.3",
+    "prettier-eslint": "^16.3.0",
+    "prettier-plugin-tailwindcss": "^0.6.5",
+    "tailwindcss": "^3.4.4",
+    "typescript": "~5.5.2",
+    "typescript-eslint": "8.0.0-alpha.38"
+  }
+}

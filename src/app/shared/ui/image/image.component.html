@@ -1,0 +1,15 @@
+<picture>
+  <source [srcset]="imageUrl | formatImage: 1024" media="(min-width: 1024px)" />
+  <source [srcset]="imageUrl | formatImage: 768" media="(min-width: 768px)" />
+  <source [srcset]="imageUrl | formatImage: 480" media="(min-width: 480px)" />
+
+  <img
+    appImageErrorHandler
+    [ngSrc]="imageUrl | formatImage: width"
+    [width]="width"
+    [height]="height"
+    [alt]="altText"
+    [placeholder]="imageUrl | formatImage: 100"
+    [priority]="isPriority"
+    [ngClass]="[className ?? '']" />
+</picture>

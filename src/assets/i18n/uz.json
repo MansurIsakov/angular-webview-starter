@@ -1,0 +1,16 @@
+{
+  "common": {},
+  "screens": {
+    "not-found": {
+      "title": "Nimadir noto'g'ri ketdi",
+      "description": "Iltimos, yana bir bor urinib ko'ring. Xatolik davom etayotgan bo'lsa, bizning qo'ng'iroq markazimizga +998 78 150 22 45 raqamiga murojaat qiling"
+    }
+  },
+  "errors": {
+    "unknown": "Nimadir noto'g'ri ketdi"
+  },
+  "input-errors": {
+    "required": "Ushbu maydon to'ldirilishi shart",
+    "minLength": "Eng kam uzunlik {{requiredLength}}"
+  }
+}
