@@ -4,7 +4,8 @@ import { Injectable, inject } from '@angular/core';
 import { environment } from '@environments/environments';
 import { Observable, map } from 'rxjs';
 
-import { type Method, RPCResponse } from '@core/interfaces';
+import { type HttpMethod, RPCResponse } from '@core/interfaces';
+import { RPCError } from '@core/models';
 
 import { UniqueIdService } from './unique-id.service';
 
@@ -35,7 +36,7 @@ export class ApiService {
     ).pipe(
       map(response => {
         if (response.error) {
-          throw new Error(response.error.message);
+          throw new RPCError(response.error);
         }
 
         return response.result as Response;
@@ -44,7 +45,7 @@ export class ApiService {
   }
 
   private makeRequest<TResponse, TBody>(
-    method: Method,
+    method: HttpMethod,
     url: string,
     options?: {
       body?: TBody;
