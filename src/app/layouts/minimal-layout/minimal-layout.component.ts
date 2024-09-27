@@ -1,9 +1,8 @@
+import { Platform } from '@angular/cdk/platform';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 import { HeaderComponent, IOSHeaderComponent } from '@layouts/components';
-
-import { PlatformService } from '@core/services';
 
 @Component({
   selector: 'app-minimal-layout',
@@ -13,5 +12,5 @@ import { PlatformService } from '@core/services';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MinimalLayoutComponent {
-  platformService = inject(PlatformService);
+  platform = inject(Platform);
 }

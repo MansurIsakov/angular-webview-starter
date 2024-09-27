@@ -8,7 +8,7 @@ import {
 import { RouterModule } from '@angular/router';
 
 import { Header } from '@core/interfaces';
-import { AppNavigationService } from '@core/services';
+import { NavigationService } from '@core/services';
 
 @Component({
   selector: 'app-header',
@@ -18,14 +18,14 @@ import { AppNavigationService } from '@core/services';
   templateUrl: './header.component.html',
 })
 export class HeaderComponent {
-  private _appNavigationService = inject(AppNavigationService);
+  private navigationService = inject(NavigationService);
 
   header = input<Header>();
 
   onBack(event: Event): void {
     event.preventDefault();
 
-    this._appNavigationService.handleBackAction();
+    this.navigationService.handleBackAction();
   }
 
   handleLinkClick(link: Header['link']): void {

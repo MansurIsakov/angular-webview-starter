@@ -21,11 +21,7 @@ import {
   withSessionStorage,
 } from 'ngx-webstorage';
 
-import {
-  AuthInterceptor,
-  ExtraHeadersInterceptor,
-  HttpErrorInterceptor,
-} from '@core/interceptors';
+import { httpInterceptors } from '@core/interceptors';
 import { TranslocoHttpLoader } from '@core/services';
 import { provideValidationErrorMessages } from '@shared/providers';
 
@@ -36,14 +32,7 @@ export const appConfig: ApplicationConfig = {
     importProvidersFrom([BrowserAnimationsModule]),
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
-    provideHttpClient(
-      withFetch(),
-      withInterceptors([
-        AuthInterceptor,
-        ExtraHeadersInterceptor,
-        HttpErrorInterceptor,
-      ])
-    ),
+    provideHttpClient(withFetch(), withInterceptors(httpInterceptors)),
     provideTransloco({
       config: {
         availableLangs: ['en', 'ru', 'uz'],

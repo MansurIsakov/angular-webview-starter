@@ -1,3 +1,4 @@
+import { Platform } from '@angular/cdk/platform';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -16,7 +17,6 @@ import {
 import { filter } from 'rxjs';
 
 import { Header } from '@core/interfaces';
-import { PlatformService } from '@core/services';
 
 import { HeaderComponent, IOSHeaderComponent } from '../components';
 
@@ -31,7 +31,7 @@ export class MainLayoutComponent implements OnInit {
   private _activatedRoute = inject(ActivatedRoute);
   private _router = inject(Router);
   private _destroyRef = inject(DestroyRef);
-  platformService = inject(PlatformService);
+  platform = inject(Platform);
 
   header?: Header;
 

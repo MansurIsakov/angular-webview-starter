@@ -1,8 +1,13 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  OnInit,
+  inject,
+} from '@angular/core';
 
 import { TranslocoPipe } from '@jsverse/transloco';
 
-import { AppNavigationService } from '@core/services';
+import { NavigationService } from '@core/services';
 
 @Component({
   selector: 'app-not-found',
@@ -25,11 +30,10 @@ import { AppNavigationService } from '@core/services';
     </div>
   `,
 })
-export class NotFoundComponent {
-  private _appNavigationService = inject(AppNavigationService);
+export class NotFoundComponent implements OnInit {
+  private navigationService = inject(NavigationService);
 
-  public onBack(event: Event): void {
-    event.preventDefault();
-    this._appNavigationService.exitToApp();
+  ngOnInit(): void {
+    this.navigationService.setDirectExit(true);
   }
 }
